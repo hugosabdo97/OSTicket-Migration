@@ -87,7 +87,7 @@ chown -R www-data:www-data /var/www/osticket
 1. Create or place the VirtualHost configuration file at `/etc/apache2/sites-available/osticket.conf`:
 ```apache
 <VirtualHost *:1234>
-    ServerName support.pandoyo.cloud
+    ServerName support.yourdomain.com
     DocumentRoot /var/www/osticket/upload
 
     <Directory /var/www/osticket/upload>
@@ -137,7 +137,7 @@ To expose osTicket securely via HTTPS through Nginx Proxy Manager:
 1. Log into your NPM admin dashboard.
 2. Go to **Proxy Hosts** -> **Add Proxy Host**.
 3. Configure settings:
-   - **Domain Names**: `support.pandoyo.cloud`
+   - **Domain Names**: `support.yourdomain.com`
    - **Scheme**: `http`
    - **Forward IP / Host**: `<NEW_VPS_IP_OR_HOST>`
    - **Forward Port**: `1234`
@@ -151,6 +151,6 @@ To expose osTicket securely via HTTPS through Nginx Proxy Manager:
 ---
 
 ## ✅ Step 9: Verification
-1. Open your browser and navigate to `https://support.pandoyo.cloud`.
+1. Open your browser and navigate to `https://support.yourdomain.com`.
 2. Verify that the osTicket landing page loads correctly via HTTPS.
 3. Log in as an administrator to check existing tickets, settings, and attachments.
